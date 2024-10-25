@@ -17,7 +17,7 @@ public class ProvisioningController {
     private final ProvisioningService provisioningService;
 
     @GetMapping(path = "provisioning/{macAddress}")
-    public String getProvisionConfigFile(@PathVariable("macAddress") String macAddress) {
+    public String getProvisionConfigFile(@PathVariable("macAddress") String macAddress) throws Exception {
         log.info("Trying to get provision file for device with MAC address: {}", macAddress);
         return provisioningService.getProvisioningFile(macAddress);
     }

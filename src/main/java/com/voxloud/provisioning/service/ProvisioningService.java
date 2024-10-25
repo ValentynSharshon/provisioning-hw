@@ -2,5 +2,5 @@ package com.voxloud.provisioning.service;
 
 public interface ProvisioningService {
 
-    String getProvisioningFile(String macAddress);
+    String getProvisioningFile(String macAddress) throws Exception;
 }
